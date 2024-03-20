@@ -1,0 +1,32 @@
+
+:root {
+    --moveXY: 300px;
+  }
+
+
+#puzzle {
+    width: var(--moveXY);
+    height: var(--moveXY);
+    border: 1px solid #000;
+    margin: 20px auto;
+    overflow: hidden; /* Pour empêcher les pièces de sortir du cadre */
+    position: relative; /* Nécessaire pour positionner les pièces */
+    display: grid;
+    grid-template-columns: repeat(var(--moveXY), 100px);
+    grid-template-rows: repeat(var(--moveXY), 100px);
+  }
+  .piece {
+    width: var(--moveXY);
+    height: var(--moveXY);
+    box-sizing: border-box;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-size: var(--moveXY) var(--moveXY);
+    position: absolute; /* Positionnement absolu pour déplacer les pièces */
+  }
+  .empty {
+    visibility: hidden;
+  }
+
+
